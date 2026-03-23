@@ -22,7 +22,8 @@ def input_until_lucky(lucky_numbers: tuple) -> int:
         try:
             lucky_number = int(input('guss the lucky numbers: '))
             if lucky_number in lucky_numbers:
-
+                number_of_attempts += 1
+                print(f'NICE!! number of attempts is ')
                 break
 
             else:
@@ -30,6 +31,6 @@ def input_until_lucky(lucky_numbers: tuple) -> int:
                 number_of_attempts += 1
         except:
             print("⚠️  That's not a valid number!")
-    return (f'NICE!! number of attempts is {number_of_attempts}')
+    return number_of_attempts
 
 print(input_until_lucky(get_lucky_numbers(7)))
